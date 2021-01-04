@@ -1,7 +1,7 @@
 # PFOA (Personal Financial Overview Application)
 Web application which gives an insight into monthly expenditure of a user.
 
-It is a basic GoLng application, which reads and process a csv file.
+It is a basic GoLang application, which reads and process a csv file.
 
 ## Run the Application 
 
