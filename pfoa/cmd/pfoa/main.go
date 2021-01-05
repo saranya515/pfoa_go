@@ -5,9 +5,6 @@ import (
 	"fmt"
 	"log"
 	"net/http"
-	"io/ioutil"
-	"encoding/csv"
-	"strings"
 )
 
 type Profile struct {
@@ -34,25 +31,10 @@ func handleRequests() {
 	log.Fatal(http.ListenAndServe(":10000", nil))
 }
 
-func readCsv() {  
-	data, err := ioutil.ReadFile("statement.CSV")
-    if err != nil {
-        fmt.Println("File reading error", err)
-        return
-    }
-	in := string(data)
-	r := csv.NewReader(strings.NewReader(in))
 
-	records, err := r.ReadAll()
-	if err != nil {
-		log.Fatal(err)
-	}
-
-	fmt.Print(records)
-}
 
 func main() {
-	//handleRequests()
-	readCsv()
+	handleRequests()
+	//readCsv()
 }
 
